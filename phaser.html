@@ -45,7 +45,15 @@
 
     function create ()
     {
-        this.add.image(640, 360, 'background');
+        var graphics = this.add.graphics();
+        
+        graphics.fillGradientStyle(0x5BCEFA, 0x5BCEFA, 0xF5A9B8, 0xF5A9B8, 1);
+        graphics.fillRect(0, 0, 1280, 360); //  X Y Width Height
+
+        graphics.fillGradientStyle(0xF5A9B8, 0xF5A9B8, 0xFFFFFF, 0xFFFFFF, 1);
+        graphics.fillRect(0, 360, 1280, 360);
+
+        //this.add.image(640, 360, 'background');
 
         var particles = this.add.particles('DK');
         var particles2 = this.add.particles('blue');
