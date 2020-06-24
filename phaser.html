@@ -37,13 +37,15 @@
         this.load.image('DK', 'https://ace510.github.io/assets/pink.png')
         this.load.image('blue', 'https://ace510.github.io/assets/blue.png')
         this.load.image('white', 'https://ace510.github.io/assets/white.png')
+        this.load.image('background', 'https://ace510.github.io/assets/background.png')
+        this.load.image('logo2', 'https://ace510.github.io/assets/logo.png')
 
         
     }
 
     function create ()
     {
-        this.add.image(400, 300, 'sky');
+        this.add.image(400, 300, 'background');
 
         var particles = this.add.particles('DK');
         var particles2 = this.add.particles('blue');
@@ -73,7 +75,7 @@
 
 
 
-        var logo = this.physics.add.image(400,100, 'logo');
+        var logo = this.physics.add.image(400,100, 'logo2');
 
         logo.setVelocity(300, -200);
         logo.setBounce(0.99, 0.99);
